@@ -7,8 +7,8 @@
 
 <h3> Instalação e Execução </h3>
 
-<p> Comando para instalar as dependências: </p>
 usando **npm**
+<p> Comando para instalar as dependências: </p>
 ```
 $ npm install
 ```
