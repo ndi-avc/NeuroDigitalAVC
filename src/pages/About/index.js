@@ -28,68 +28,76 @@ const SECTIONS = [
           cargo:'Idealizador e PO',
           uri: 'https://picsum.photos/id/1/200',
         },
-        {
+
+        { 
           key: '2',
-          text: 'Robson Gomes',
-          cargo:'Designer UX/UI',
-          uri: 'https://picsum.photos/id/10/200',
-        },
-  
-        {
-          key: '3',
-          text: 'Francisco Silva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1002/200',
-        },
-        {
-          key: '4',
-          text: 'Antônia Torres',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1006/200',
-        },
-        {
-          key: '5',
-          text: 'Rebeca Freitas',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '6',
-          text: 'Erislândia Paiva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '7',
-          text: 'Luísa Silva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '8',
-          text: 'Luan Moraes',
-          cargo:'Programador mobile',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '9',
-          text: 'Rafael Mendes',
-          cargo:'Programador mobile',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '10',
           text: 'Heli Ribeiro',
           cargo:'Tech Lead',
           uri: 'https://picsum.photos/id/1008/200',
         },
+
         {
-          key: '11',
-          text: 'Alanna Paiva',
-          cargo:'Programadora mobile',
+          key: '3',
+          text: 'Robson Gomes',
+          cargo:'Designer UX/UI',
+          uri: 'https://picsum.photos/id/10/200',
+        },
+
+        {
+          key: '4',
+          text: 'Luan Moraes',
+          cargo:'Programador Mobile',
           uri: 'https://picsum.photos/id/1008/200',
         },
 
+        {
+          key: '5',
+          text: 'Alanna Paiva',
+          cargo:'Programadora Mobile',
+          uri: 'https://picsum.photos/id/1008/200',
+        },
+
+        {
+          key: '6',
+          text: 'Rafael Mendes',
+          cargo:'Programador Mobile',
+          uri: 'https://picsum.photos/id/1008/200',
+        },
+
+        {
+          key: '7',
+          text: 'Gabriel Santos',
+          cargo:'Conteúdo teórico',
+          uri: 'https://picsum.photos/id/1002/200',
+        },
+
+        {
+          key: '8',
+          text: 'Cristiane Torres',
+          cargo:'Conteúdo teórico',
+          uri: 'https://picsum.photos/id/1006/200',
+        },
+
+        {
+          key: '9',
+          text: 'Rebeca Freitas',
+          cargo:'Conteúdo teórico',
+          uri: 'https://picsum.photos/id/1008/200',
+        },
+
+        {
+          key: '10',
+          text: 'Erislândia Paiva',
+          cargo:'Conteúdo teórico',
+          uri: 'https://picsum.photos/id/1008/200',
+        },
+
+        {
+          key: '11',
+          text: 'Luísa Silva',
+          cargo:'Conteúdo teórico',
+          uri: 'https://picsum.photos/id/1008/200',
+        },
       ],
     },
 ];
@@ -107,6 +115,7 @@ const ListItem = ({ item }) => {
             resizeMode="cover"
           />
           <Text style={styles.itemText}>{item.text}</Text>
+          <Text style={styles.itemCargo}>{item.cargo}</Text>
         </View>
       </TouchableOpacity>
     );
