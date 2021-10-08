@@ -62,18 +62,29 @@ export const styles = StyleSheet.create({
   },
 
   item: {
+    marginTop: 0,
     margin: 23,
+    height: 250,
+    width: 170,
+    padding: 30,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    elevation: 7,
   },
 
   itemPhoto: {
     width: 100,
     height: 100,
     borderRadius: 100,
+    alignItems: "center",
   },
 
   itemText: {
     color: '#1F234B',
+    textAlign: "center",
     marginTop: 10,
+    marginTop: 10,
+    fontSize: 14,
   },
 
 
