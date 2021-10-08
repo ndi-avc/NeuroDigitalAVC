@@ -26,7 +26,7 @@ const SECTIONS = [
           key: '1',
           text: 'Nickolas Silva',
           cargo:'Idealizador e PO',
-          uri: 'https://picsum.photos/id/1/200',
+          uri: 'https://picsum.photos/id/1008/200',
         },
 
         { 
@@ -107,7 +107,7 @@ const ListItem = ({ item }) => {
       
       <TouchableOpacity activeOpacity = {0.5} /*onPress={item.key}*/>
         <View style={styles.item}>
-          <Image
+          <Image 
             source={{
               uri: item.uri,
             }}
@@ -139,11 +139,11 @@ function About(){
         <StatusBar style="light" />
         <SafeAreaView style={{ flex: 1 }}> 
         <ScrollView>
-            <> 
-            <Image
-                source={require('../../../img/logo.png')}
+        <> 
+          <Image
+              source={require('../../../img/logo.png')}
                 style={styles.logoStyle}
-            />
+          />
             <Text style={styles.scontainer} style={styles.textAbout}>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id risus nec erat fringilla venenatis at eget ante. Vestibulum vitae eros venenatis, pellentesque tortor quis, convallis quam. Sed vel <B>maximus</B> dolor. Sed a ultrices libero, vel suscipit. </Text>
             <Text style={styles.textVersion} > v1.0.0-pre-alpha</Text>
             <Text style={styles.textVersionSub} fontWeight= '600' color= '#A5A5A5' > versão </Text>
