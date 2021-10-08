@@ -7,7 +7,13 @@
 
 <h3> Instalação e Execução </h3>
 
-usando **npm**
+Usando **npm**
+
+comando para instalar as dependências:
 ```
 $ npm install
+```
+comando para iniciar a execução(abrir o servidor local no navegador):
+```
+$ npm start
 ```
