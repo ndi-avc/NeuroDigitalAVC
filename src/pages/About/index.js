@@ -3,7 +3,6 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { styles } from './styles'
 import {
-    StyleSheet,
     Text,
     View,
     SectionList,
@@ -24,72 +23,80 @@ const SECTIONS = [
       data: [
         {
           key: '1',
-          text: 'Nickolas Souza Silva',
+          text: 'Nickolas Silva',
           cargo:'Idealizador e PO',
-          uri: 'https://picsum.photos/id/1/200',
-        },
-        {
-          key: '2',
-          text: 'Robson Mesquita Gomes',
-          cargo:'Designer UX/UI',
-          uri: 'https://picsum.photos/id/10/200',
-        },
-  
-        {
-          key: '3',
-          text: 'Francisco Gabriel Santos da Silva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1002/200',
-        },
-        {
-          key: '4',
-          text: 'Antônia Cristiane Ferreira Torres',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1006/200',
-        },
-        {
-          key: '5',
-          text: 'Ana Rebeca de Souza Freitas',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '6',
-          text: 'Erislândia Maria Campos Paiva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '7',
-          text: 'Maria Luísa Damasceno Silva',
-          cargo:'Produção de conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '8',
-          text: 'Raimundo Luan da Silva Moraes',
-          cargo:'Programador mobile',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '9',
-          text: 'Rafael Benvindo Holanda Mendes',
-          cargo:'Programador mobile',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '10',
-          text: 'Heli costa ribeiro',
-          cargo:'Tech Lead',
-          uri: 'https://picsum.photos/id/1008/200',
-        },
-        {
-          key: '11',
-          text: 'Alanna Maria Machado Alves Paiva',
-          cargo:'Programadora mobile',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-nickolas.png'),
         },
 
+        { 
+          key: '2',
+          text: 'Heli Ribeiro',
+          cargo:'Tech Lead',
+          uri: require('../../../img/picture-heli.png'),
+        },
+
+        {
+          key: '3',
+          text: 'Robson Gomes',
+          cargo:'Designer UX/UI',
+          uri: require('../../../img/picture-robson.png'),
+        },
+
+        {
+          key: '4',
+          text: 'Luan Moraes',
+          cargo:'Programador Mobile',
+          uri: require('../../../img/picture-luan.png'),
+        },
+
+        {
+          key: '5',
+          text: 'Alanna Paiva',
+          cargo:'Programadora Mobile',
+          uri: '',
+        },
+
+        {
+          key: '6',
+          text: 'Rafael Mendes',
+          cargo:'Programador Mobile',
+          uri: '',
+        },
+
+        {
+          key: '7',
+          text: 'Gabriel Santos',
+          cargo:'Conteúdo teórico',
+          uri: require('../../../img/picture-gabriel.png'),
+        },
+
+        {
+          key: '8',
+          text: 'Cristiane Torres',
+          cargo:'Conteúdo teórico',
+          uri: require('../../../img/picture-cristiane.png'),
+        },
+
+        {
+          key: '9',
+          text: 'Rebeca Freitas',
+          cargo:'Conteúdo teórico',
+          uri: require('../../../img/picture-rebeca.png'),
+        },
+
+        {
+          key: '10',
+          text: 'Erislândia Paiva',
+          cargo:'Conteúdo teórico',
+          uri: require('../../../img/picture-eris.png'),
+        },
+
+        {
+          key: '11',
+          text: 'Luísa Silva',
+          cargo:'Conteúdo teórico',
+          uri: require('../../../img/picture-luiza.png'),
+        },
       ],
     },
 ];
@@ -99,14 +106,14 @@ const ListItem = ({ item }) => {
       
       <TouchableOpacity activeOpacity = {0.5} /*onPress={item.key}*/>
         <View style={styles.item}>
-          <Image
-            source={{
-              uri: item.uri,
-            }}
+          <Image 
+            source={item.uri ? item.uri: {uri:'https://picsum.photos/id/1008/200'}}
             style={styles.itemPhoto}
             resizeMode="cover"
+
           />
           <Text style={styles.itemText}>{item.text}</Text>
+          <Text style={styles.itemCargo}>{item.cargo}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -130,11 +137,11 @@ function About(){
         <StatusBar style="light" />
         <SafeAreaView style={{ flex: 1 }}> 
         <ScrollView>
-            <> 
-            <Image
-                source={require('../../../img/logo.png')}
+        <> 
+          <Image
+              source={require('../../../img/logo.png')}
                 style={styles.logoStyle}
-            />
+          />
             <Text style={styles.scontainer} style={styles.textAbout}>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id risus nec erat fringilla venenatis at eget ante. Vestibulum vitae eros venenatis, pellentesque tortor quis, convallis quam. Sed vel <B>maximus</B> dolor. Sed a ultrices libero, vel suscipit. </Text>
             <Text style={styles.textVersion} > v1.0.0-pre-alpha</Text>
             <Text style={styles.textVersionSub} fontWeight= '600' color= '#A5A5A5' > versão </Text>
@@ -171,5 +178,4 @@ function About(){
 }
 
  
-
 export default About; 

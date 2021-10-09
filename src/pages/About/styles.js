@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 
-
   buttonImageIconStyle: {
     width: 13,
     height: 20,
@@ -44,6 +43,7 @@ export const styles = StyleSheet.create({
     lineHeight: 16.44,
     color: '#1F234B', 
   },
+  
   textVersionSub: {
     top: 355,
     textAlign: 'center',
@@ -58,23 +58,39 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: '#1F234B',
     marginTop: 500,
-    marginBottom: 57,
+    marginBottom: 30,
   },
 
   item: {
+    marginTop: 0,
     margin: 23,
+    height: 240,
+    width: 170,
+    padding: 30,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    elevation: 7,
   },
 
   itemPhoto: {
     width: 100,
     height: 100,
     borderRadius: 100,
+    alignItems: "center",
   },
 
   itemText: {
     color: '#1F234B',
-    marginTop: 10,
+    textAlign: "center", 
+    marginTop: 25,
+    fontSize: 13,
   },
 
+  itemCargo: {
+    textAlign: "center",
+    color: 'gray',
+    fontSize: 10,
+    marginTop: 15,
+  },
 
 });

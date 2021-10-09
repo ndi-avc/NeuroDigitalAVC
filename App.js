@@ -17,7 +17,7 @@ import {
 
 
 
-export default function App () {
+export default () => {
   return (
     <About/>
   );
