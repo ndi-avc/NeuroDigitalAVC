@@ -3,7 +3,6 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { styles } from './styles'
 import {
-    StyleSheet,
     Text,
     View,
     SectionList,
@@ -26,77 +25,77 @@ const SECTIONS = [
           key: '1',
           text: 'Nickolas Silva',
           cargo:'Idealizador e PO',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-nickolas.png'),
         },
 
         { 
           key: '2',
           text: 'Heli Ribeiro',
           cargo:'Tech Lead',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-heli.png'),
         },
 
         {
           key: '3',
           text: 'Robson Gomes',
           cargo:'Designer UX/UI',
-          uri: 'https://picsum.photos/id/10/200',
+          uri: require('../../../img/picture-robson.png'),
         },
 
         {
           key: '4',
           text: 'Luan Moraes',
           cargo:'Programador Mobile',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-luan.png'),
         },
 
         {
           key: '5',
           text: 'Alanna Paiva',
           cargo:'Programadora Mobile',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: '',
         },
 
         {
           key: '6',
           text: 'Rafael Mendes',
           cargo:'Programador Mobile',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: '',
         },
 
         {
           key: '7',
           text: 'Gabriel Santos',
           cargo:'Conteúdo teórico',
-          uri: 'https://picsum.photos/id/1002/200',
+          uri: require('../../../img/picture-gabriel.png'),
         },
 
         {
           key: '8',
           text: 'Cristiane Torres',
           cargo:'Conteúdo teórico',
-          uri: 'https://picsum.photos/id/1006/200',
+          uri: require('../../../img/picture-cristiane.png'),
         },
 
         {
           key: '9',
           text: 'Rebeca Freitas',
           cargo:'Conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-rebeca.png'),
         },
 
         {
           key: '10',
           text: 'Erislândia Paiva',
           cargo:'Conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-eris.png'),
         },
 
         {
           key: '11',
           text: 'Luísa Silva',
           cargo:'Conteúdo teórico',
-          uri: 'https://picsum.photos/id/1008/200',
+          uri: require('../../../img/picture-luiza.png'),
         },
       ],
     },
@@ -108,11 +107,10 @@ const ListItem = ({ item }) => {
       <TouchableOpacity activeOpacity = {0.5} /*onPress={item.key}*/>
         <View style={styles.item}>
           <Image 
-            source={{
-              uri: item.uri,
-            }}
+            source={item.uri ? item.uri: {uri:'https://picsum.photos/id/1008/200'}}
             style={styles.itemPhoto}
             resizeMode="cover"
+
           />
           <Text style={styles.itemText}>{item.text}</Text>
           <Text style={styles.itemCargo}>{item.cargo}</Text>
@@ -120,6 +118,7 @@ const ListItem = ({ item }) => {
       </TouchableOpacity>
     );
 };
+
 
 
 
