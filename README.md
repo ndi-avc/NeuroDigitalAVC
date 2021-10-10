@@ -17,3 +17,14 @@ comando para iniciar a execução(abrir o servidor local no navegador):
 ```
 $ npm start
 ```
+
+Usando **yarn**
+
+comando para instalar as dependências:
+```
+$ yarn
+```
+comando para iniciar a execução(abrir o servidor local no navegador):
+```
+$ yarn start
+```
