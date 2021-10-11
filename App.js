@@ -1,25 +1,6 @@
-import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import About from './src/pages/About/index'
+import "react-native-gesture-handler";
+import React from "react";
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  SectionList,
-  SafeAreaView,
-  Image,
-  FlatList,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import About from "./src/pages/About/index";
 
-
-
-export default () => {
-  return (
-    <About/>
-  );
-};
-
+export default () => <About />;

@@ -3,60 +3,60 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 
   buttonImageIconStyle: {
     width: 13,
     height: 20,
     top: 31,
-    left:359,
+    left: 359,
   },
 
   logoStyle: {
-    position: 'absolute',
+    position: "absolute",
     top: 107,
     width: 83.31,
     height: 86.56,
-    alignItems: 'center',
+    alignItems: "center",
     left: 165,
     right: 165,
   },
 
-  textAbout: { 
+  textAbout: {
     top: 274,
-    textAlign: 'center',
+    textAlign: "center",
     textAlignVertical: "center",
     width: 328,
-    fontStyle: 'italic',
-    fontWeight: '400',
+    fontStyle: "italic",
+    fontWeight: "400",
     fontSize: 18,
     marginLeft: 43,
-    color: '#1F234B', 
+    color: "#1F234B",
   },
 
   textVersion: {
     top: 350,
-    textAlign: 'center',
+    textAlign: "center",
     textAlignVertical: "center",
-    fontWeight: '700',
+    fontWeight: "700",
     lineHeight: 16.44,
-    color: '#1F234B', 
+    color: "#1F234B",
   },
-  
+
   textVersionSub: {
     top: 355,
-    textAlign: 'center',
+    textAlign: "center",
     textAlignVertical: "center",
-    fontWeight: '700',
+    fontWeight: "700",
     lineHeight: 16.44,
-    color: 'gray',
+    color: "gray",
   },
 
   sectionHeader: {
-    fontWeight: '800',
+    fontWeight: "800",
     fontSize: 18,
-    color: '#1F234B',
+    color: "#1F234B",
     marginTop: 500,
     marginBottom: 30,
   },
@@ -80,17 +80,16 @@ export const styles = StyleSheet.create({
   },
 
   itemText: {
-    color: '#1F234B',
-    textAlign: "center", 
+    color: "#1F234B",
+    textAlign: "center",
     marginTop: 25,
     fontSize: 13,
   },
 
   itemCargo: {
     textAlign: "center",
-    color: 'gray',
+    color: "gray",
     fontSize: 10,
     marginTop: 15,
   },
-
 });
