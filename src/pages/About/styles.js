@@ -18,9 +18,7 @@ export const styles = StyleSheet.create({
     top: 107,
     width: 83.31,
     height: 86.56,
-    alignItems: "center",
-    left: 165,
-    right: 165,
+    alignSelf: "center",
   },
 
   textAbout: {
@@ -31,7 +29,7 @@ export const styles = StyleSheet.create({
     fontStyle: "italic",
     fontWeight: "400",
     fontSize: 18,
-    marginLeft: 43,
+    alignSelf: "center",
     color: "#1F234B",
   },
 
