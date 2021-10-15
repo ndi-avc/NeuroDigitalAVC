@@ -5,18 +5,19 @@ import { StatusBar } from "expo-status-bar";
 import {
   Text,
   View,
-  SectionList,
   SafeAreaView,
   Image,
   FlatList,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { styles } from "./styles";
+// eslint-disable-next-line camelcase
 
-const B = ({ children }) => (
-  <Text style={{ fontWeight: "bold" }}>{children}</Text>
-);
+import AppLoading from "expo-app-loading";
+
+// eslint-disable-next-line camelcase
+import { useFonts, KronaOne_400Regular } from "@expo-google-fonts/krona-one";
+import { styles } from "./styles";
 
 const DATA = [
   {
@@ -114,14 +115,21 @@ const ListItem = ({ item }) => (
 );
 
 function About() {
+  const [fontsLoaded] = useFonts({
+    KronaOne_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View style={styles.container}>
       {/* <TouchableOpacity activeOpacity={0.9}>
-        <Image
-          source={require("../../../img/chevron-left.png")}
-          style={styles.buttonImageIconStyle}
-        />
-      </TouchableOpacity> */}
+          <Image
+            source={require("../../../img/chevron-left.png")}
+            style={styles.buttonImageIconStyle}
+          />
+        </TouchableOpacity> */}
 
       <StatusBar color="#fff" />
       <SafeAreaView style={{ flex: 1 }}>
@@ -136,7 +144,7 @@ function About() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
               risus nec erat fringilla venenatis at eget ante. Vestibulum vitae
               eros venenatis, pellentesque tortor quis, convallis quam. Sed vel{" "}
-              <B>maximus</B> dolor. Sed a ultrices libero, vel suscipit.{" "}
+              maximus dolor. Sed a ultrices libero, vel suscipit.{" "}
             </Text>
             <Text style={styles.textVersion}> v1.0.0-pre-alpha</Text>
             <Text
@@ -150,7 +158,14 @@ function About() {
           </>
 
           <View style={{ paddingHorizontal: 40 }}>
-            <Text style={styles.sectionHeader}>Nosso time</Text>
+            <Text
+              style={[
+                styles.sectionHeader,
+                { fontFamily: "KronaOne_400Regular", fontSize: 12 },
+              ]}
+            >
+              NOSSO TIME
+            </Text>
             <FlatList
               data={DATA}
               renderItem={({ item }) => (
