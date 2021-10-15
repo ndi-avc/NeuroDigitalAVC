@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable global-require */
 import React from "react";
 import "react-native-gesture-handler";
@@ -15,8 +16,11 @@ import {
 
 import AppLoading from "expo-app-loading";
 
-// eslint-disable-next-line camelcase
-import { useFonts, KronaOne_400Regular } from "@expo-google-fonts/krona-one";
+import { useFonts } from "expo-font";
+import { KronaOne_400Regular } from "@expo-google-fonts/krona-one";
+
+import { Raleway_400Regular } from "@expo-google-fonts/raleway";
+
 import { styles } from "./styles";
 
 const DATA = [
@@ -108,7 +112,14 @@ const ListItem = ({ item }) => (
         style={styles.itemPhoto}
         resizeMode="cover"
       />
-      <Text style={styles.itemText}>{item.text}</Text>
+      <Text
+        style={[
+          styles.itemText,
+          { fontFamily: "KronaOne_400Regular", fontSize: 9 },
+        ]}
+      >
+        {item.text}
+      </Text>
       <Text style={styles.itemCargo}>{item.cargo}</Text>
     </View>
   </TouchableOpacity>
@@ -117,6 +128,7 @@ const ListItem = ({ item }) => (
 function About() {
   const [fontsLoaded] = useFonts({
     KronaOne_400Regular,
+    Raleway_400Regular,
   });
 
   if (!fontsLoaded) {
@@ -139,7 +151,9 @@ function About() {
               source={require("../../../img/logo.png")}
               style={styles.logoStyle}
             />
-            <Text style={styles.textAbout}>
+            <Text
+              style={[styles.textAbout, { fontFamily: "Raleway_400Regular" }]}
+            >
               {" "}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
               risus nec erat fringilla venenatis at eget ante. Vestibulum vitae
