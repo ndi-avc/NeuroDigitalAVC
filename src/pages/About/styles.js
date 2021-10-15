@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     textAlignVertical: "center",
     width: 328,
-    fontStyle: "italic",
     fontWeight: "400",
     fontSize: 18,
     alignSelf: "center",
@@ -62,6 +61,7 @@ export const styles = StyleSheet.create({
   item: {
     marginTop: 0,
     margin: 23,
+    marginLeft: 2,
     height: 240,
     width: 170,
     padding: 30,
@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 100,
-    alignItems: "center",
+    alignSelf: "center",
   },
 
   itemText: {
